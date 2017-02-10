@@ -15,5 +15,6 @@ public class Lab3Exercises {
 		myFrame.setVisible(true);
 		//myFrame.setTitle("Amy Ayala Ramos");
 		
+		
 	}
 }

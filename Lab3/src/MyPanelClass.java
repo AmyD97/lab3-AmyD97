@@ -76,31 +76,38 @@
 //	                        g.drawPolygon(p2);
 	                        
 	                        
-	                        //Puertorrican Flag
-	                        //Rectangle
+	                                                
+	                        //Puetorrican Flag
+	                        //This excercise was done with different coordinates, to enhance flexibility
+	                        
+	                        //Stripes	    
+	                        g.setColor(Color.RED);
 	                        x1 = x1 + 10;
 	                        y1 = y1 + 10;
-	                        wrec = (y1+100)/5; //rectangle width
-	                        recd = y1+(2*height/5;
-	                        g.setColor(Color.RED);
-	                        g.fillRect(x1, y1, width, wrec);
-	                        g.fillRect(x1, recd, width, wrec);
+	                        height = height - 10;
+	                        width = width - 10;
+	                        int h = (height - 10)/5; //each stripe covers 1/5 of the height of the frame
+	                        int y3 = y1 + 2*((height)/5); //y position is incremented by 1/5 of the height of the frame
+	                        int y4 = y1 + 4*((height)/5);
+	                        g.fillRect(x1, y1, width, h); 
+	                        g.fillRect( x1 , y3, width, h);
+	                        g.fillRect(x1, y4, width, h);
 	                        
 	                        //triangle
-	                      
-	                        Polygon p3 = new Polygon();
-	                        p3.addPoint(x1, y1);
-	                        p3.addPoint(x1+90, y1+50);
-	                        p3.addPoint(x1, y1+100);
+	                        Polygon p3 = new Polygon();            
+	                   	    p3.addPoint(x1, y1);//upper left corner of triangle
+	                        p3.addPoint((x1 + width/2), (y1 + height/2));//middle point of circle (210-10)/2 = 100
+	                        p3.addPoint(x1, height);//lower left corner of triangle
 	                        g.setColor(Color.BLUE);
 	                        g.fillPolygon(p3);
+	                        	                        
 	                        //star
 	                        y1 = y1 - 30;
-	                        x1 = x1-20;
+	                        x1 = x1 - 20;
 	                        Polygon p2 = new Polygon();
-	                        p2.addPoint(x1 + 25, y1 + 73);
-	                        p2.addPoint(x1 + 41, y1 + 73);
-	                        p2.addPoint(x1 + 47, y1 + 58);
+	                        p2.addPoint(x1 + 25, y1 + 73);//200/4=25	150/2.05
+	                        p2.addPoint(x1 + 41, y1 + 73); //200/4.9
+	                        p2.addPoint(x1 + 47, y1 + 58); //200/	                        
 	                        p2.addPoint(x1 + 53, y1 + 73);
 	                        p2.addPoint(x1 + 69, y1 + 73);
 	                        p2.addPoint(x1 + 56, y1 + 83);
